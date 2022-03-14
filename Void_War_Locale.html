@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Battle Frenzie Next Date</title>
+		<script src="countdown/moment.js"></script>
+ 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/moment.js"></script>
+		<script type="text/javascript"> 
+		function display_c(){
+		var refresh=1000; // Refresh rate in milli seconds
+		mytime=setTimeout('display_ct()',refresh)
+		}
+		
+		//function display_ct() {
+		//	var x = new Date()
+		//	document.getElementById('ct').innerHTML = x;
+		//	//display_c();
+		//}
+		</script>
+		<script>
+		function display_ct7() {
+			var now = moment()
+			var next = moment('2022-03-27T00:00:00+00:00')
+			while(next<now){
+				next.add(672,"h")
+			}
+			next.subtract(24,"h")
+			var x1=next.format("hh:mm:ss A ZZ")
+			var x3=next.format("ddd, MMMM Do, YYYY")
+			document.getElementById('ct1').innerHTML = x1;
+			//document.getElementById('ct3').innerHTML = x2;
+			document.getElementById('ct2').innerHTML = x3;
+			display_c7();
+			}
+		function display_c7(){
+			var refresh=1000; // Refresh rate in milli seconds
+			mytime=setTimeout('display_ct7()',refresh)
+		}
+		display_c7()
+		</script>
+		<span id='ct2' style="background-color: #FFFF0000; 
+							  font-family: 'Barlow';
+							  color: #ffffff;	
+							  display: flex;
+							  justify-content: center;
+							  align-items: center;
+							  font-size: 20px;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000; ">
+		</span>
+		<span id='ct1' style="background-color: #FFFF0000; 
+							  font-family: 'Barlow';
+							  color: #ffffff;	
+							  font-size: 16px;
+							  display: flex;
+							  justify-content: center;
+							  align-items: flex;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000; ">
+		</span>
+		<span id='ct3' style="background-color: #FFFF0000; 
+							  font-family: 'Algerian';
+							  color: #50f050;	
+							  font-size: 24px;
+							  display: flex;
+							  justify-content: center;
+							  align-items: center;">
+		</span>
+		</head>
+</html>
