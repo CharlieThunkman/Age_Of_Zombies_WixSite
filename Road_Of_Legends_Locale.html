@@ -25,9 +25,9 @@
 			var end  = moment().startOf('month').add(21,"d").subtract(1,"ms")
 			next.add(next.format("ZZ")/100,"h")
 			end.add(end.format("ZZ")/100,"h")
-			console.log (next.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ")," to ",
-						  end.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"),
-						  now.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"))
+			//console.log (next.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ")," to ",
+			//			  end.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"),
+			//			  now.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"))
 			var localTimeS = next.local(true).format("hh:mm:ss a ZZ")
 			var localTimeE =  end.local(true).format("hh:mm:ss a ZZ")
 			var x2 = 		 next.local(true).format("ddd, MMMM Do, YYYY")
