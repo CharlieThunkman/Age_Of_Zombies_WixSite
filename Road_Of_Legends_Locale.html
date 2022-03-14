@@ -1,0 +1,109 @@
+<html>
+	<head>
+		<title>Battle Frenzie Next Date</title>
+		<script src="https://raw.githubusercontent.com/CharlieThunkman/Age_Of_Zombies_WixSite/be285dcf90339054f823fd2c385f6b1ac38ab88a/moment.js"></script>
+		<script type="text/javascript"> 
+		function display_c(){
+		var refresh=5000; // Refresh rate in milli seconds
+		mytime=setTimeout('display_ct()',refresh)
+		}
+		
+		//function display_ct() {
+		//	var x = new Date()
+		//	document.getElementById('ct').innerHTML = x;
+		//	//display_c();
+		//}
+		</script>
+		<script>
+		function display_ct7() {
+			const weekNames = ["Sun","Mon","Tues","Wednes","Thurs","Fri","Satur"];
+			const monthNames = ["January", "February", "March", "April", "May", 
+			"June", "July", "August", "September", "October", "November", "December"
+		];
+			var now = moment()
+			var next = moment().startOf('month')
+			var end  = moment().startOf('month').add(21,"d").subtract(1,"ms")
+			next.add(next.format("ZZ")/100,"h")
+			end.add(end.format("ZZ")/100,"h")
+			console.log (next.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ")," to ",
+						  end.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"),
+						  now.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ"))
+			var localTimeS = next.local(true).format("hh:mm:ss a ZZ")
+			var localTimeE =  end.local(true).format("hh:mm:ss a ZZ")
+			var x2 = 		 next.local(true).format("ddd, MMMM Do, YYYY")
+			var x3 = 		  end.local(true).format("ddd, MMMM Do, YYYY")
+			
+			document.getElementById('ct2').innerHTML = localTimeS;
+			document.getElementById('ct4').innerHTML = localTimeE;
+			//document.getElementById('ct3').innerHTML = x2;
+			document.getElementById('ct1').innerHTML = x2;
+			document.getElementById('ct3').innerHTML = x3;
+			document.getElementById('ct5').innerHTML = "till";
+			display_c7();
+			}
+		function display_c7(){
+			var refresh=1000; // Refresh rate in milli seconds
+			mytime=setTimeout('display_ct7()',refresh)
+		}
+		display_c7()
+		</script>
+		<style> 
+		.block-border{ 
+			display: block; 
+			padding: 5px; 
+		border: 1px solid red; 
+		} 
+		.border-24{ 
+			background-color: #FFFF0000; 
+			font-family: 'Barlow';
+			color: #ffffff;	
+			font-size: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: flex;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000; 
+		}
+  		.border-20{ 
+			background-color: #FFFF0000; 
+			font-family: 'Barlow';
+			color: #ffffff;	
+			font-size: 16px;
+			display: flex;
+			justify-content: center;
+			align-items: flex;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000; 
+		}
+		.border-14{ 
+			background-color: #FFFF0000; 
+			font-family: 'Barlow';
+			color: #ffffff;	
+			font-size: 12px;
+			display: flex;
+			justify-content: center;
+			align-items: flex;
+			text-shadow:
+			-1px -1px 0 #000000,
+			1px -1px 0 #000000,
+			-1px 1px 0 #000000,
+			1px 1px 0 #000000; 
+		}  
+		</style> 
+		<div class="block-boarder">
+		<span id='ct1' class="border-24">
+		</span>
+		<span id='ct2' class="border-20"></span>
+		<span id='ct5' class="border-14"></span>
+		</span>
+		<span id='ct3' class="border-24"></span>
+		<span id='ct4' class="border-20"></span>
+		</div>
+		</head>
+</html>
