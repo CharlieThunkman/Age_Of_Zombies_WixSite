@@ -24,26 +24,41 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 	<button class="tablink" onclick="openPage('Dep', this, 'blue')">Depot</button>
 	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
 	<div id="tableJS"></div>
+	<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
 	
 	<div id="Aca" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
-		<script> elements = elementAca(); </script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+		<script> elements = elementAca(); table(elements);</script>
 	</div>
 	<div id="Cam" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
-    		<script> elements = elementCam(); </script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+    		<script> elements = elementCam(); table(elements);</script>
 	</div>
 	<div id="Dep" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Depot.js"></script>
-		<script> elements = elementDep(); </script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+		<script> elements = elementDep(); table(elements);</script>
 	</div>
 	<div id="Dis" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Dispatch_Center.js"></script>
- 		<script> elements = elementDis(); </script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+ 		<script> elements = elementDis(); table(elements);</script>
+	</div>
+	<div id="Emb" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Embassy.js"></script>
+		<script> elements = elementEmb(); table(elements);</script>
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
+	</div>
+	<div id="Dis" class="tabcontent">
 	</div>
 	<script>
 function openPage(pageName,elmnt,color) {
