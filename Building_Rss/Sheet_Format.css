@@ -1,4 +1,4 @@
-.ritz .waffle a { color: inherit; }
+.ritz .waffle a { color: inherit; cellspacing="0"; cellpadding="0"}
 .ritz .waffle .s0{border-right: none;background-color:#ffffff;text-align:left;font-weight:bold;font-style:italic;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#ffffff;font-family:'Arial';font-size:60pt;vertical-align:middle;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
 .ritz .waffle .s1{border-left: none;border-right: none;background-color:#ffffff;}
 .ritz .waffle .s2{border-left: none;background-color:#ffffff;text-align:left;color:#000000;font-family:'docs-Inconsolata',Arial;font-size:11pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}
