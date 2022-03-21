@@ -76,13 +76,11 @@ function tableRow(j,data,tbody){
 			row_2_data_1.innerHTML = data[i];
 			var labelType = ['label','timer']
 			row_2_data_1.id = labelType[Math.sign(i)]
-			var isZero = 1-Math.sign(parseInt(elements[j][i]))>-2 ? 1-Math.sign(parseInt(elements[j][i])) : 0 ;
-			var isBlank = (elements[j][i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
-			var colStyle = ( (j-1)%2+2*isZero ) + 6*(1-Math.sign(j)) + isBlank
-			row_2_data_1.className = classId[colStyle]
 		} else { row_2_data_1.innerHTML = "";}
-		var format = ["ct2","ct1"]
-		row_2_data_1.className = format[Math.sign(i)];
+		var isZero = 1-Math.sign(parseInt(elements[j][i]))>-2 ? 1-Math.sign(parseInt(elements[j][i])) : 0 ;
+		var isBlank = (elements[j][i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
+		var colStyle = ( (j-1)%2+2*isZero ) + 6*(1-Math.sign(j)) + isBlank
+		row_2_data_1.className = classId[colStyle]
 		row_2.appendChild(row_2_data_1);
 	}
 	tbody.appendChild(row_2);
