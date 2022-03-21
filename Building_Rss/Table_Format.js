@@ -46,7 +46,6 @@ function table(data){
 	let thead = document.createElement('thead');
 	let tbody = document.createElement('tbody');
 	table.id = "countdownTable"
-	const classId = ["s8","s12","s15","s13","s10","s6"]
 	// Creating and adding data to first row of the table
 	let row_1 = document.createElement('tr');
 	for(var i=0;i<data[0].length;i++){
@@ -70,6 +69,7 @@ function table(data){
 }
 
 function tableRow(j,data,tbody){
+	const classId = ["s8","s12","s15","s13","s10","s6"]
 	var row_2 = document.createElement('tr');
 	//var data_1 = ["1.","James Clerk","Netflix"]
 	for(var i=0;i<data.length;i++){ // How many elements in sub-array
