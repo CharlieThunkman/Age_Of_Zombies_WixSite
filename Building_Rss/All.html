@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
+	<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {height: 100%;margin: 0;font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {background-color: #555;color: white;float: left;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 10%;}
+
+.tablink:hover {  background-color: #777;}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {color: white;display: none;padding: 100px 20px;height: 100%;}
+</style>
 	<head>
 		<title>NO TITLE plz</title>
 		<link rel="stylesheet" href="Sheet_Format.css"/>
 	</head>
-	<button class="tablink" onclick="openPage('Aca', this, 'red')">Home</button>
-	<button class="tablink" onclick="openPage('Cam', this, 'green')" id="defaultOpen">News</button>
-	<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
-	<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+	<button class="tablink" onclick="openPage('Aca', this, 'red')">Academy</button>
+	<button class="tablink" onclick="openPage('Cam', this, 'green')" id="defaultOpen">Camp</button>
+	<button class="tablink" onclick="openPage('Dep', this, 'blue')">Depot</button>
+	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
 	<div id="tableJS"></div>
+	
 	<div id="Aca" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
 		<script> elements = elementAca(); </script>
@@ -19,4 +35,35 @@
     		<script> elements = elementCam(); </script>
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
 	</div>
+	<div id="Dep" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Depot.js"></script>
+		<script> elements = elementDep(); </script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+	</div>
+	<div id="Dis" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Dispatch_Center.js"></script>
+ 		<script> elements = elementDis(); </script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+	</div>
+	<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
 </html>
