@@ -57,7 +57,6 @@ function table(data){
 	for(var j=1;j<data.length;j++){ //How many sub-arrays
 		tableRow(j,data[j],tbody)
 		console.log(data,data[j],data[j][1])
-		var secret = document.getElementById('secretValue')
 	}
 	
 	table.appendChild(thead);
