@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>NO TITLE plz</title>
-<link rel="stylesheet" href="Sheet_Format.css"/>
-</head>
-<div id="tableJS"></div>
-<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
-	<script> elements = elementAca(); </script>
-<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
-<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
-    <script> elements = elementCam(); </script>
-<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+	<head>
+		<title>NO TITLE plz</title>
+		<link rel="stylesheet" href="Sheet_Format.css"/>
+	</head>
+	<button class="tablink" onclick="openPage('Aca', this, 'red')">Home</button>
+	<button class="tablink" onclick="openPage('Cam', this, 'green')" id="defaultOpen">News</button>
+	<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+	<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
+	<div id="tableJS"></div>
+	<div id="Aca" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
+		<script> elements = elementAca(); </script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+	</div>
+	<div id="Cam" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
+    		<script> elements = elementCam(); </script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+	</div>
 </html>
