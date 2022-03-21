@@ -1,6 +1,7 @@
+function elementAca(){
 	let elements = [
 	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
-		[ 1   ,"FREE","FREE","FREE","FREE","FREE"],
+		[ 1   ,"FREE","FREE","FREE","FREE","FREE",""],
 		[ 2   ,0,       "650",        "0",        "0",0,"Main Hall, Lvl:2" ],
 		[ 3   ,0,     "1,050",        "0",        "0",0,"Main Hall, Lvl:3" ],
 		[ 4   ,0,     "1,650",        "0",        "0",0,"Main Hall, Lvl:4" ],
@@ -31,23 +32,5 @@
 		[29   ,0,"12,377,880","2,475,570","1,650,380",0,"Main Hall, Lvl:29"],
 		[30   ,0,"16,091,190","3,218,230","2,145,490",0,"Main Hall, Lvl:30"]
 	];
-function dataRunner(){
-	let table = document.getElementById("table").children[0]
-	console.log(table)//ACADEMY?
-	for(var j=0;j<elements.length;j++){
-		for(var i=0;i<elements[j].length;i++){
-//			const classId = ["White", "red", "Wh0", "re0", "blank", "header"]
-			const classId = ["s8","s12","s15","s13","s10","s6"]
-			var isZero = 1-Math.sign(parseInt(elements[j][i]))>-2 ? 1-Math.sign(parseInt(elements[j][i])) : 0 ;
-			var isBlank = (elements[j][i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
-			var colStyle = ( (j-1)%2+2*isZero ) + 6*(1-Math.sign(j)) + isBlank
-			let cell = table.children[j+Math.sign(j)].children[i+1]
-			
-			cell.className = classId[colStyle]
-			cell.innerHTML = elements[j][i]
-			
-			//console.log(isZero,colStyle,classId[colStyle])
-			//console.log(j,i,cell,elements[j][i])
-		}
-	}
+	return elements
 }
