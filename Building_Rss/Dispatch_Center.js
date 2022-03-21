@@ -1,6 +1,6 @@
 function elementDis(){
 	let elements = [
-	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
+	["LVL","Food","Oil","Steel","Minerals","Uranium","Leadership Badge","Buildings"],
 		[ 1   ,"Free","Free","Free","Free","Free"],
 		[ 2   ,"0",       "140",        "0",        "0","0",    "8", "", "Main Hall, Lvl:2"],
 		[ 3   ,"0",       "210",        "0",        "0","0",   "17", "", "Main Hall, Lvl:3"],
