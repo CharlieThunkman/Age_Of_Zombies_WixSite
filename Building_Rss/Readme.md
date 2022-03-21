@@ -1,1 +1,1 @@
-https://charliethunkman.github.io/Age_Of_Zombies_WixSite/%5Binsert_filename_HERE%5D.html
+https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.html
