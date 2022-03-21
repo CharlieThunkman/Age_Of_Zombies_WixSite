@@ -1,6 +1,4 @@
 function elementOil(){
-	let table = document.getElementById("table").children[0]
-	console.log(table)//Farm
 	let elements = [
 	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
 //		[ 1   ,"Free","Free","Free","Free","Free"],
