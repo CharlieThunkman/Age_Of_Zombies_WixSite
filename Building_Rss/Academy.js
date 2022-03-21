@@ -1,6 +1,3 @@
-function dataRunner(){
-	let table = document.getElementById("table").children[0]
-	console.log(table)//ACADEMY?
 	let elements = [
 	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
 		[ 1   ,"FREE","FREE","FREE","FREE","FREE"],
@@ -34,6 +31,9 @@ function dataRunner(){
 		[29   ,0,"12,377,880","2,475,570","1,650,380",0,"Main Hall, Lvl:29"],
 		[30   ,0,"16,091,190","3,218,230","2,145,490",0,"Main Hall, Lvl:30"]
 	];
+function dataRunner(){
+	let table = document.getElementById("table").children[0]
+	console.log(table)//ACADEMY?
 	for(var j=0;j<elements.length;j++){
 		for(var i=0;i<elements[j].length;i++){
 //			const classId = ["White", "red", "Wh0", "re0", "blank", "header"]
