@@ -58,8 +58,6 @@ function table(data){
 		tableRow(j,data[j],tbody)
 		console.log(data,data[j],data[j][1])
 		var secret = document.getElementById('secretValue')
-		secret.max = j
-		console.log(secret,secret.max)
 	}
 	
 	table.appendChild(thead);
