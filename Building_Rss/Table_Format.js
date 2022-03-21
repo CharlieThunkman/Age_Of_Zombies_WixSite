@@ -61,7 +61,12 @@ function table(data){
 	
 	table.appendChild(thead);
 	table.appendChild(tbody);
-	document.getElementById('tableJS').appendChild(table);
+	table.classList.add("waffle");
+	var tableHolder = document.getElementById('tableJS')
+	tableHolder.appendChild(table);
+	tableHolder.classList.add("ritz");
+
+	
 
 }
 
