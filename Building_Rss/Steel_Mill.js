@@ -1,9 +1,6 @@
 function elementSte(){
-	let table = document.getElementById("table").children[0]
-	console.log(table)//Farm
 	let elements = [
 	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
-//		[ 1   ,"Free","Free","Free","Free","Free"],
 		[ 1   ,"      130",      "130","0","0","0","Main Hall, Lvl:1" ],
 		[ 2   ,"      270",      "270","0","0","0","Main Hall, Lvl:2" ],
 		[ 3   ,"      340",      "340","0","0","0","Main Hall, Lvl:3" ],
@@ -34,14 +31,6 @@ function elementSte(){
 		[28   ,"1,466,050","1,466,050","0","0","0","Main Hall, Lvl:28"],
 		[29   ,"1,641,490","1,641,490","0","0","0","Main Hall, Lvl:29"],
 		[30   ,"1,838,280","1,838,280","0","0","0","Main Hall, Lvl:30"]
-//	,	[31   ,"","Main Hall, Lvl:31"],
-//		[32   ,"","Main Hall, Lvl:32"],
-//		[33   ,"","Main Hall, Lvl:33"],
-//		[34   ,"","Main Hall, Lvl:34"],
-//		[35   ,"","Main Hall, Lvl:35"],
-//		[36   ,"","Main Hall, Lvl:36"],
-//		[37   ,"","Main Hall, Lvl:37"],
-//		[38   ,"","Main Hall, Lvl:38"]
 	];
 	return elements
 }
