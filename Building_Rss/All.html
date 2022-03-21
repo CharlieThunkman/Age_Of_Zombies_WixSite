@@ -23,6 +23,8 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 	<button class="tablink" onclick="openPage('Cam', this, 'green')" id="defaultOpen">Camp</button>
 	<button class="tablink" onclick="openPage('Dep', this, 'blue')">Depot</button>
 	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
+	<button class="tablink" onclick="openPage('Cam', this, 'blue')">Camp</button>
+	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
 	<div id="tableJS"></div>
 	<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
 	
@@ -46,7 +48,9 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Embassy.js"></script>
 		<script> elements = elementEmb(); table(elements);</script>
 	</div>
-	<div id="Dis" class="tabcontent">
+	<div id="Cam" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
+	  	<script> elements = elementCam(); </script>
 	</div>
 	<div id="Dis" class="tabcontent">
 	</div>
