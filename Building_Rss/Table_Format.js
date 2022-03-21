@@ -67,8 +67,9 @@ function table(data){
 	var tableHolder = document.getElementById('tableJS')
 	tableHolder.appendChild(table);
 	tableHolder.classList.add("ritz");
-
-	
+	if (tableHolder.children.length > 1){
+		tableHolder.removeChild(tableHolder.firstChild)
+	}
 
 }
 
