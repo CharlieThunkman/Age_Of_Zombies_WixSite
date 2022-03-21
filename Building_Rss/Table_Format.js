@@ -46,8 +46,8 @@ function table(data){
 	let thead = document.createElement('thead');
 	let tbody = document.createElement('tbody');
 	table.id = "countdownTable"
-	table.setAttribute("cellpadding", "democlass");
-	table.setAttribute("cellspacing", "democlass");
+	table.setAttribute("cellpadding", "0");
+	table.setAttribute("cellspacing", "0");
 	// Creating and adding data to first row of the table
 	let row_1 = document.createElement('tr');
 	for(var i=0;i<data[0].length;i++){
