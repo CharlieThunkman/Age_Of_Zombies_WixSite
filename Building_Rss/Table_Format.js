@@ -49,14 +49,14 @@ function table(data){
 	table.setAttribute("cellpadding", "0");
 	table.setAttribute("cellspacing", "0");
 	// Creating and adding data to first row of the table
-	let row_1 = document.createElement('tr');
-	for(var i=0;i<data[0].length;i++){
-		let heading_1 = document.createElement('th');
-		heading_1.innerHTML = data[0][i];
-		row_1.appendChild(heading_1);
-	}
-	thead.appendChild(row_1);
-	for(var j=1;j<data.length;j++){ //How many sub-arrays
+//	let row_1 = document.createElement('tr');
+//	for(var i=0;i<data[0].length;i++){
+//		let heading_1 = document.createElement('th');
+//		heading_1.innerHTML = data[0][i];
+//		row_1.appendChild(heading_1);
+//	}
+//	thead.appendChild(row_1);
+	for(var j=0;j<data.length;j++){ //How many sub-arrays
 		tableRow(j,data[j],tbody)
 		console.log(data,data[j],data[j][1])
 	}
