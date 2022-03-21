@@ -1,3 +1,4 @@
+function elementCam(){
 	let elements = [
 	["LVL","Food","Oil","Steel","Minerals","Uranium","Buildings"],
 		[ 1   ,"FREE","FREE","FREE","FREE","FREE"],
@@ -39,24 +40,5 @@
 		[37   ,"79,228,520","47,537,060","17,747,100","10,141,210","118,050","Main Hall, Lvl:37"],
 		[38   ,"85,157,890","51,094,670","19,075,270","10,900,160","139,750","Main Hall, Lvl:38"]
 	];
-
-function dataRunner(){
-	let table = document.getElementById("table").children[0]
-	console.log(table)//ACADEMY?
-	for(var j=0;j<elements.length;j++){
-		for(var i=0;i<elements[j].length;i++){
-//			const classId = ["White", "red", "Wh0", "re0", "blank", "header"]
-			const classId = ["s8","s12","s15","s13","s10","s6"]
-			var isZero = 1-Math.sign(parseInt(elements[j][i]))>-2 ? 1-Math.sign(parseInt(elements[j][i])) : 0 ;
-			var isBlank = (elements[j][i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
-			var colStyle = ( (j-1)%2+2*isZero ) + 6*(1-Math.sign(j)) + isBlank
-			let cell = table.children[j+Math.sign(j)].children[i+1]
-			
-			cell.className = classId[colStyle]
-			cell.innerHTML = elements[j][i]
-			
-			console.log(isZero,colStyle,classId[colStyle])
-			console.log(j,i,cell,elements[j][i])
-		}
-	}
+	return elements
 }
