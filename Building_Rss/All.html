@@ -8,12 +8,12 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 }
 
 /* Style tab links */
-.tablink {background-color: #555;color: white;float: left;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 155px;border-radius: 30%;}
+.tablink {background-color: #555;color: white;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 163px;border-radius: 30%;}
 
 .tablink:hover {  background-color: #777;}
 
-.column1 {float: left;  width: 33%;  padding: 5px;}
-.column2 {float: left;  width: 67%;  padding: 5px;}
+.column1 {display: flex; justify-content: space-evenly; flex-wrap: wrap; align-items: center;  padding: 5px;}
+.column2 {padding: 5px;}
 
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -62,11 +62,11 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 		<button class="tablink" onclick="tableUpdate(elementGar(),this)">Garage</button>
 		<button class="tablink" onclick="tableUpdate(elementHos(),this)">Hospital</button>
 		<button class="tablink" onclick="tableUpdate(elementHou(),this)">House</button>
-		<button class="tablink" onclick="tableUpdate(elementMed(),this)">Medic_Station</button>
-		<button class="tablink" onclick="tableUpdate(elementRec(),this)">Recon_Center</button>
-		<button class="tablink" onclick="tableUpdate(elementTra(),this)">Training_Grounds</button>
+		<button class="tablink" onclick="tableUpdate(elementMed(),this)">Medic Station</button>
+		<button class="tablink" onclick="tableUpdate(elementRec(),this)">Recon Center</button>
+		<button class="tablink" onclick="tableUpdate(elementTra(),this)">Training Grounds</button>
 		<button class="tablink" onclick="tableUpdate(elementWal(),this)">Wall</button>
-		</div> <br><br><p></p>
+		</div> 
 		<div id="tableJS" class="column2"></div>
 		
 		<script>
