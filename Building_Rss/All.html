@@ -8,81 +8,77 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 }
 
 /* Style tab links */
-.tablink {background-color: #555;color: white;float: left;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 10%;}
+.tablink {background-color: #555;color: white;float: left;border: none;outline: none;cursor: pointer;padding: 14px 16px;font-size: 17px;width: 155px;border-radius: 30%;}
 
 .tablink:hover {  background-color: #777;}
+
+.column1 {float: left;  width: 33%;  padding: 5px;}
+.column2 {float: left;  width: 67%;  padding: 5px;}
+
 
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {color: white;display: none;padding: 100px 20px;height: 100%;}
 </style>
 	<head>
-		<title>NO TITLE plz</title>
+		<title id="Title">NO TITLE plz</title>
 		<link rel="stylesheet" href="Sheet_Format.css"/>
 	</head>
-	<button class="tablink" onclick="openPage('Aca', this, 'red')">Academy</button>
-	<button class="tablink" onclick="openPage('Cam', this, 'green')" id="defaultOpen">Camp</button>
-	<button class="tablink" onclick="openPage('Dep', this, 'blue')">Depot</button>
-	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
-	<button class="tablink" onclick="openPage('Cam', this, 'blue')">Camp</button>
-	<button class="tablink" onclick="openPage('Dis', this, 'orange')">Dispatch Center</button>
-	<div id="tableJS"></div>
-	<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
-	
-	<div id="Aca" class="tabcontent">
+	<body>
+		<!-- Web Source Arrays and Formatter -->
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
-		<script> elements = elementAca(); table(elements);</script>
-	</div>
-	<div id="Cam" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
-    		<script> elements = elementCam(); table(elements);</script>
-	</div>
-	<div id="Dep" class="tabcontent">
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Workshop.js"></script>
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Depot.js"></script>
-		<script> elements = elementDep(); table(elements);</script>
-	</div>
-	<div id="Dis" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Dispatch_Center.js"></script>
- 		<script> elements = elementDis(); table(elements);</script>
-	</div>
-	<div id="Emb" class="tabcontent">
 		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Embassy.js"></script>
-		<script> elements = elementEmb(); table(elements);</script>
-	</div>
-	<div id="Cam" class="tabcontent">
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
-	  	<script> elements = elementCam(); </script>
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<div id="Dis" class="tabcontent">
-	</div>
-	<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Farm.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Oil_Refinery.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Steel_Mill.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Mineral_Mine.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Main_Hall.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Garage.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Hospital.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/House.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Medic_Station.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Recon_Center.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Training_Grounds.js"></script>
+		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Wall.js"></script>
+		
+		<!-- Button Classes -->
+		<div id="Buttons" class="column1">
+		<button class="tablink" onclick="tableUpdate(elementAca(),this)">Academy</button>
+		<button class="tablink" onclick="tableUpdate(elementCam(),this)">Camp</button>
+		<button class="tablink" onclick="tableUpdate(elementCam(),this)">Factory</button>
+		<button class="tablink" onclick="tableUpdate(elementWor(),this)">Workshop</button>
+		<button class="tablink" onclick="tableUpdate(elementDep(),this)">Depot</button>
+		<button class="tablink" onclick="tableUpdate(elementDis(),this)">Dispatch Center</button>
+		<button class="tablink" onclick="tableUpdate(elementEmb(),this)">Embassy</button>
+		<button class="tablink" onclick="tableUpdate(elementFar(),this)">Farm</button>
+		<button class="tablink" onclick="tableUpdate(elementOil(),this)">Oil Refinery</button>
+		<button class="tablink" onclick="tableUpdate(elementSte(),this)">Steel Mill</button>
+		<button class="tablink" onclick="tableUpdate(elementMin(),this)">Mineral Mine</button>
+		<button class="tablink" onclick="tableUpdate(elementHal(),this)" id="defaultOpen">Main Hall</button>
+		<button class="tablink" onclick="tableUpdate(elementGar(),this)">Garage</button>
+		<button class="tablink" onclick="tableUpdate(elementHos(),this)">Hospital</button>
+		<button class="tablink" onclick="tableUpdate(elementHou(),this)">House</button>
+		<button class="tablink" onclick="tableUpdate(elementMed(),this)">Medic_Station</button>
+		<button class="tablink" onclick="tableUpdate(elementRec(),this)">Recon_Center</button>
+		<button class="tablink" onclick="tableUpdate(elementTra(),this)">Training_Grounds</button>
+		<button class="tablink" onclick="tableUpdate(elementWal(),this)">Wall</button>
+		</div> <br><br><p></p>
+		<div id="tableJS" class="column2"></div>
+		
+		<script>
+			function tableUpdate(elements, label){
+				document.getElementById('Title').innerHTML = label.innerHTML + " RSS guide"
+				table(elements);
+			}
+		</script>
+		<script>
+			// Get the element with id="defaultOpen" and click on it
+			document.getElementById("defaultOpen").click();
+		</script>
    
-</body>
+	</body>
 </html> 
-</html>
