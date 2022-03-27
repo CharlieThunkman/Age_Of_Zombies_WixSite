@@ -85,8 +85,8 @@ function tableRow(j,data,tbody){
 			var labelType = ['label','timer']
 			row_2_data_1.id = labelType[Math.sign(i)]
 		} else { row_2_data_1.innerHTML = "";}
-		var isZero = 1-Math.sign(parseInt(elements[j][i]))>-2 ? 1-Math.sign(parseInt(elements[j][i])) : 0 ;
-		var isBlank = (elements[j][i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
+		var isZero = 1-Math.sign(parseInt(data[i]))>-2 ? 1-Math.sign(parseInt(data[i])) : 0 ;
+		var isBlank = (data[i]==="") ? 4-((j-1)%2+2*isZero) : 0 ;
 		var colStyle = ( (j-1)%2+2*isZero ) + 6*(1-Math.sign(j)) + isBlank
 		row_2_data_1.className = classId[colStyle]
 		row_2.appendChild(row_2_data_1);
