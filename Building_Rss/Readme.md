@@ -1,4 +1,4 @@
-| Website URL |  |
+| Website URL | [All](https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/All.html) |
 | ---------: | --- |
 | [Academy](https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.html) | ![Academy](https://static.wixstatic.com/media/f3d393_d3574660a0684bbd886b3917cd5f54d0~mv2.jpg) |
 | [Camp](https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.html) |
