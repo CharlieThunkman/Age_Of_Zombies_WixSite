@@ -12,8 +12,9 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 
 .tablink:hover {  background-color: #777;}
 
-.column1 {display: flex; justify-content: space-evenly; flex-wrap: wrap; align-items: center;  padding: 5px;}
+.column1 {display: flex; justify-content: space-evenly; flex-wrap: wrap; align-items: center;  padding: 5px; width: 90%; left:5%}
 .column2 {padding: 5px;}
+.column3 {padding: 5px;width: 33%;size: max(100vh, 100vw);}
 
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -47,32 +48,57 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 		
 		<!-- Button Classes -->
 		<div id="Buttons" class="column1">
-		<button class="tablink" onclick="tableUpdate(elementAca(),this)">Academy</button>
-		<button class="tablink" onclick="tableUpdate(elementCam(),this)">Camp</button>
-		<button class="tablink" onclick="tableUpdate(elementCam(),this)">Factory</button>
-		<button class="tablink" onclick="tableUpdate(elementWor(),this)">Workshop</button>
-		<button class="tablink" onclick="tableUpdate(elementDep(),this)">Depot</button>
-		<button class="tablink" onclick="tableUpdate(elementDis(),this)">Dispatch Center</button>
-		<button class="tablink" onclick="tableUpdate(elementEmb(),this)">Embassy</button>
-		<button class="tablink" onclick="tableUpdate(elementFar(),this)">Farm</button>
-		<button class="tablink" onclick="tableUpdate(elementOil(),this)">Oil Refinery</button>
-		<button class="tablink" onclick="tableUpdate(elementSte(),this)">Steel Mill</button>
-		<button class="tablink" onclick="tableUpdate(elementMin(),this)">Mineral Mine</button>
-		<button class="tablink" onclick="tableUpdate(elementHal(),this)" id="defaultOpen">Main Hall</button>
-		<button class="tablink" onclick="tableUpdate(elementGar(),this)">Garage</button>
-		<button class="tablink" onclick="tableUpdate(elementHos(),this)">Hospital</button>
-		<button class="tablink" onclick="tableUpdate(elementHou(),this)">House</button>
-		<button class="tablink" onclick="tableUpdate(elementMed(),this)">Medic Station</button>
-		<button class="tablink" onclick="tableUpdate(elementRec(),this)">Recon Center</button>
-		<button class="tablink" onclick="tableUpdate(elementTra(),this)">Training Grounds</button>
-		<button class="tablink" onclick="tableUpdate(elementWal(),this)">Wall</button>
+		<button class="tablink" onclick="tableUpdate(elementAca(),this,00)">Academy</button>
+		<button class="tablink" onclick="tableUpdate(elementCam(),this,01)">Camp</button>
+		<button class="tablink" onclick="tableUpdate(elementCam(),this,02)">Factory</button>
+		<button class="tablink" onclick="tableUpdate(elementWor(),this,03)">Workshop</button>
+		<button class="tablink" onclick="tableUpdate(elementDep(),this,04)">Depot</button>
+		<button class="tablink" onclick="tableUpdate(elementDis(),this,05)">Dispatch Center</button>
+		<button class="tablink" onclick="tableUpdate(elementEmb(),this,06)">Embassy</button>
+		<button class="tablink" onclick="tableUpdate(elementFar(),this,07)">Farm</button>
+		<button class="tablink" onclick="tableUpdate(elementOil(),this,08)">Oil Refinery</button>
+		<button class="tablink" onclick="tableUpdate(elementSte(),this,09)">Steel Mill</button>
+		<button class="tablink" onclick="tableUpdate(elementMin(),this,10)">Mineral Mine</button>
+		<button class="tablink" onclick="tableUpdate(elementHal(),this,11)" id="defaultOpen">Main Hall</button>
+		<button class="tablink" onclick="tableUpdate(elementGar(),this,12)">Garage</button>
+		<button class="tablink" onclick="tableUpdate(elementHos(),this,13)">Hospital</button>
+		<button class="tablink" onclick="tableUpdate(elementHou(),this,14)">House</button>
+		<button class="tablink" onclick="tableUpdate(elementMed(),this,15)">Medic Station</button>
+		<button class="tablink" onclick="tableUpdate(elementRec(),this,16)">Recon Center</button>
+		<button class="tablink" onclick="tableUpdate(elementTra(),this,17)">Training Grounds</button>
+		<button class="tablink" onclick="tableUpdate(elementWal(),this,18)">Wall</button>
 		</div> 
+		<img id="Picture" class="column3"></img>
 		<div id="tableJS" class="column2"></div>
 		
 		<script>
-			function tableUpdate(elements, label){
+			function tableUpdate(elements, label,word){
 				document.getElementById('Title').innerHTML = label.innerHTML + " RSS guide"
 				table(elements);
+				console.log(word)
+				const image = [
+					["Academy"			,"https://static.wixstatic.com/media/f3d393_d3574660a0684bbd886b3917cd5f54d0~mv2.jpg"], 
+					["Camp"				,"https://google.com"],
+					["Factory"			,"https://static.wixstatic.com/media/f3d393_6368326bbd454f268cc9d49602fb155b~mv2.jpg"],
+					["Workshop"			,"https://google.com"],
+					["Depot"			,"https://google.com"],
+					["Dispatch"			,"https://google.com"],
+					["Embassy"			,"https://static.wixstatic.com/media/f3d393_5ccefb96f9db46cdaff5b6d5212936bb~mv2.jpg"],
+					["Farm"				,"https://static.wixstatic.com/media/f3d393_9698dfdeebd34c90b6a454091763bd11~mv2.jpg"],
+					["Oil Refinery"			,"https://static.wixstatic.com/media/f3d393_f3b92ab00a6747249833f0d4aba67057~mv2.jpg"],
+					["Steel Mill"			,"https://static.wixstatic.com/media/f3d393_34944115e7db41619e98cf99f5b40d41~mv2.jpg"],
+					["Mineral Mine"			,"https://static.wixstatic.com/media/f3d393_29c9152280ca4232a8200ca89451c711~mv2.jpg"],
+					["Hall"				,"https://static.wixstatic.com/media/f3d393_9f076f0db6ef4f08808ba4c49cc6945f~mv2.jpg"],
+					["Garage"			,"https://static.wixstatic.com/media/f3d393_8c0a6fe891c34e5790f7ce3edd6fbf38~mv2.jpg"],
+					["Hospital"			,"https://static.wixstatic.com/media/f3d393_015fbea3b4f547dd91c87faa7187fed3~mv2.jpg"],
+					["House"			,"https://static.wixstatic.com/media/f3d393_af452224c88343b7b2ad12599c611e0a~mv2.jpg"],
+					["Medic Station"		,"https://static.wixstatic.com/media/f3d393_33e45e29cc7145688adf4ecc3a3a2568~mv2.jpg"],
+					["Recon Center"			,"https://google.com"],
+					["Training Grounds"		,"https://static.wixstatic.com/media/f3d393_dceb799ea7bd48aba74069c20b68a7f0~mv2.jpg"],
+					["Wall"				,"https://static.wixstatic.com/media/f3d393_5da83b5cf4cd4b91a0a557b35f15cc3c~mv2.jpg"]
+				]
+				document.getElementById("Picture").src = image[word][1]
+				
 			}
 		</script>
 		<script>
