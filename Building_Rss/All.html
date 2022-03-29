@@ -14,7 +14,7 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 
 .column1 {display: flex; justify-content: space-evenly; flex-wrap: wrap; align-items: center;  padding: 5px; width: 90%; left:5%}
 .column2 {padding: 5px;}
-.column3 {padding: 5px;width: 33%;size: max(100vh, 100vw);}
+.column3 {padding: 5px;width: max(360px, 100vw - 760px);size: max(100vh, 100vw); float:left;}
 
 
 /* Style the tab content (and add height:100% for full page content) */
@@ -26,26 +26,27 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 	</head>
 	<body>
 		<!-- Web Source Arrays and Formatter -->
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Workshop.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Depot.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Dispatch_Center.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Embassy.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Farm.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Oil_Refinery.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Steel_Mill.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Mineral_Mine.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Main_Hall.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Garage.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Hospital.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/House.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Medic_Station.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Recon_Center.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Training_Grounds.js"></script>
-		<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Wall.js"></script>
-		
+		<div id="scripts">
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Table_Format.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Academy.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Camp.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Workshop.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Depot.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Dispatch_Center.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Embassy.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Farm.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Oil_Refinery.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Steel_Mill.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Mineral_Mine.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Main_Hall.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Garage.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Hospital.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/House.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Medic_Station.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Recon_Center.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Training_Grounds.js"></script>
+			<script src="https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/Wall.js"></script>
+		</div>
 		<!-- Button Classes -->
 		<div id="Buttons" class="column1">
 		<button class="tablink" onclick="tableUpdate(elementAca(),this,00)">Academy</button>
@@ -85,16 +86,16 @@ body, html {height: 100%;margin: 0;font-family: Arial;
 					["Dispatch"			,"https://google.com"],
 					["Embassy"			,"https://static.wixstatic.com/media/f3d393_5ccefb96f9db46cdaff5b6d5212936bb~mv2.jpg"],
 					["Farm"				,"https://static.wixstatic.com/media/f3d393_9698dfdeebd34c90b6a454091763bd11~mv2.jpg"],
-					["Oil Refinery"			,"https://static.wixstatic.com/media/f3d393_f3b92ab00a6747249833f0d4aba67057~mv2.jpg"],
-					["Steel Mill"			,"https://static.wixstatic.com/media/f3d393_34944115e7db41619e98cf99f5b40d41~mv2.jpg"],
-					["Mineral Mine"			,"https://static.wixstatic.com/media/f3d393_29c9152280ca4232a8200ca89451c711~mv2.jpg"],
+					["Oil Refinery"		,"https://static.wixstatic.com/media/f3d393_f3b92ab00a6747249833f0d4aba67057~mv2.jpg"],
+					["Steel Mill"		,"https://static.wixstatic.com/media/f3d393_34944115e7db41619e98cf99f5b40d41~mv2.jpg"],
+					["Mineral Mine"		,"https://static.wixstatic.com/media/f3d393_29c9152280ca4232a8200ca89451c711~mv2.jpg"],
 					["Hall"				,"https://static.wixstatic.com/media/f3d393_9f076f0db6ef4f08808ba4c49cc6945f~mv2.jpg"],
 					["Garage"			,"https://static.wixstatic.com/media/f3d393_8c0a6fe891c34e5790f7ce3edd6fbf38~mv2.jpg"],
 					["Hospital"			,"https://static.wixstatic.com/media/f3d393_015fbea3b4f547dd91c87faa7187fed3~mv2.jpg"],
 					["House"			,"https://static.wixstatic.com/media/f3d393_af452224c88343b7b2ad12599c611e0a~mv2.jpg"],
-					["Medic Station"		,"https://static.wixstatic.com/media/f3d393_33e45e29cc7145688adf4ecc3a3a2568~mv2.jpg"],
-					["Recon Center"			,"https://google.com"],
-					["Training Grounds"		,"https://static.wixstatic.com/media/f3d393_dceb799ea7bd48aba74069c20b68a7f0~mv2.jpg"],
+					["Medic Station"	,"https://static.wixstatic.com/media/f3d393_33e45e29cc7145688adf4ecc3a3a2568~mv2.jpg"],
+					["Recon Center"		,"https://google.com"],
+					["Training Grounds"	,"https://static.wixstatic.com/media/f3d393_dceb799ea7bd48aba74069c20b68a7f0~mv2.jpg"],
 					["Wall"				,"https://static.wixstatic.com/media/f3d393_5da83b5cf4cd4b91a0a557b35f15cc3c~mv2.jpg"]
 				]
 				document.getElementById("Picture").src = image[word][1]
