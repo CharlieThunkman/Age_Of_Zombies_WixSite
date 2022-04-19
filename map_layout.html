@@ -1,47 +1,102 @@
 <html>
-	<head>
-		<title>Map Layout</title>
-		<!--<link rel="stylesheet" href="css/map_layout.css"/> <!-- Will eventually contain style code below -->
-	</head>
-	<body class="rotate">
-		<button class="button button1">Green</button>
-		<button class="button button2">Blue</button>
-	</body>
-	<style>
-		.button {
-  	border: none;
-  	color: white;
-  	padding: 16px 32px;
-  	text-align: center;
-  	text-decoration: none;
-  	display: inline-block;
-  	font-size: 16px;
-  	margin: 4px 2px;
-  	transition-duration: 0.4s;
-  	cursor: pointer;
-	}
+    <head>
+        <title>Map Layout</title>
+        <!--<link rel="stylesheet" href="css/map_layout.css"/> <!-- Will eventually contain style code below -->
+    </head>
+    <body>
+        <button class="buttonT button1">Green</button>
+        <button class="buttonT button2">Blue</button>
+        <div id="rotatedBody" class="rotate">
+          <div id="buttonArray">
+            </div>
+             </div>
+    </body>
+    <style>
+    .rotate{
+//        display: flex
+  //      align-items:flex-start
+        //transform:translate(20%,20%) rotate(-135deg) scale(.5);        
+              animation:liverotate 20s linear infinite
+    }    
+    .reverserotate{
+        transform:rotate(135deg);
+    }
+    .buttonT{
+        padding:25px 20px
+        
+    }
+        .button {
+      border: none;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 12px;
+      margin: 0px 0px;
+      transition-duration: 0.4s;
+      cursor: pointer;
 
-	.button1 {
-  	background-color: white;
-  	color: black;
-  	border: 2px solid #4CAF50;
-	}
+    }
+    
+    @keyframes liverotate{
+            0% {transform:rotate(000deg) translate(100px,20px)}
+          25% {transform:rotate(090deg) translate(100px,20px)}
+          50% {transform:rotate(180deg) translate(100px,20px)}
+          75% {transform:rotate(270deg) translate(100px,20px)}
+        100% {transform:rotate(360deg) translate(100px,20px)}
+        
+    }
 
-	.button1:hover {
-  	background-color: #4CAF50;
-  	color: white;
-	}
+    .button1 {
+      background-color: white;
+      color: black;
+      border: 2px solid #4CAF50;
+    }
 
-	.button2 {
-  	background-color: white;
-  	color: black;
-  	border: 2px solid #008CBA;
-	}
+    .button1:hover {
+      background-color: #4CAF50;
+      color: white;
+    }
 
-	.button2:hover {
-  	background-color: #008CBA;
-  	color: white;
-	}
-	</style>
-	<!--<script src="js/map_layout.js"></script> <!-- will contain class changing for buttons -->
+    .button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #008CBA;
+    }
+
+    .button2:hover {
+      background-color: #008CBA;
+      color: white;
+    }
+    </style>
+    <script>
+        function Multiplier(a) {return Math.sqrt(a*a*2)-a;}
+        var translater = document.getElementById('rotatedBody')
+        let square = 2
+//        translater.style.transform = "translate(" + (square-1) * Multiplier((square-1)*11) + "px, "+ (square-1) * Multiplier((square-5)*2) + "px) rotate(-135deg) scale(.5)";
+        translater.style.transform = "rotate(-135deg) scale(1) translate(0px, 50px)";
+        let table = document.createElement('table');
+        let tbody = document.createElement('tbody');
+        for(var i=0;i<square;i++){
+            let column = document.createElement('tr');
+            for(var j=0;j<square;j++){
+                let  row = document.createElement('td');
+                let  button = document.createElement('button');
+                button.innerHTML = Math.ceil(Math.random()*1200) + ":" + Math.ceil(Math.random()*1200);
+                        row.classList.add("button") ;
+                        button.classList.add("reverserotate") ;
+                        button.classList.add("button1") ;
+                        row.classList.add("button1") ;
+                    //row.classList.remove("button1")
+                        row.appendChild(button);
+                        column.appendChild(row);
+            }
+            tbody.appendChild(column);
+        }
+        table.appendChild(tbody);
+        var tableHolder = document.getElementById("buttonArray");
+        tableHolder.appendChild(table);
+    </script>
+    <!--<script src="js/map_layout.js"></script> <!-- will contain class changing for buttons -->
 </html>
