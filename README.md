@@ -8,3 +8,4 @@ Visit https://charliethunkman.github.io/Age_Of_Zombies_WixSite/[insert_filename_
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Void_War_Locale.html
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Battle_Frenzie_Locale.html
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Road_Of_Legends_Locale.html
+https://charliethunkman.github.io/Age_Of_Zombies_WixSite/map_layout.html
