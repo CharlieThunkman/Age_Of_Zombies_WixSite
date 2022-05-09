@@ -4,46 +4,59 @@
         <!--<link rel="stylesheet" href="css/map_layout.css"/> <!-- Will eventually contain style code below -->
     </head>
     <body>
-        <button class="buttonT button1">Green</button>
-        <button class="buttonT button2">Blue</button>
         <div id="rotatedBody" class="rotate">
-          <div id="buttonArray">
-            </div>
-             </div>
+			<div id="buttonArray">
+			</div>
+		</div>
+        <!--button class="buttonT button1">Green</button>
+        <button class="buttonT button2">Blue</button-->
+		<div id="staticButtons"></div>
     </body>
     <style>
+	.buttontext{
+		border: none;
+		color: white;
+		padding: 50px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 24px;
+		margin: 0px 0px;
+		transition-duration: 0.4s;
+		cursor: pointer;
+	}
     .rotate{
-//        display: flex
-  //      align-items:flex-start
-        //transform:translate(20%,20%) rotate(-135deg) scale(.5);        
-              animation:liverotate 20s linear infinite
+        display: flex
+        align-items:flex-start
+        transform:translate(20%,20%) rotate(-135deg) scale(.5);        
     }    
     .reverserotate{
         transform:rotate(135deg);
     }
     .buttonT{
-        padding:25px 20px
+		position:fixed;
+        padding:25px 20px;
         
     }
-        .button {
-      border: none;
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 12px;
-      margin: 0px 0px;
-      transition-duration: 0.4s;
-      cursor: pointer;
+	.button {
+		border: none;
+		color: white;
+		padding: 70px 20px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 24px;
+		margin: 0px 0px;
+		transition-duration: 0.4s;
+		cursor: pointer;
 
     }
     
     @keyframes liverotate{
-            0% {transform:rotate(000deg) translate(100px,20px)}
-          25% {transform:rotate(090deg) translate(100px,20px)}
-          50% {transform:rotate(180deg) translate(100px,20px)}
-          75% {transform:rotate(270deg) translate(100px,20px)}
+		  0% {transform:rotate(000deg) translate(100px,20px)}
+		 25% {transform:rotate(090deg) translate(100px,20px)}
+		 50% {transform:rotate(180deg) translate(100px,20px)}
+		 75% {transform:rotate(270deg) translate(100px,20px)}
         100% {transform:rotate(360deg) translate(100px,20px)}
         
     }
@@ -71,11 +84,69 @@
     }
     </style>
     <script>
-        function Multiplier(a) {return Math.sqrt(a*a*2)-a;}
+		function stringToArray(string,array=[0,0]){
+			if(!(string[0]=='[' || string[0]==']' || string[0]==',')){
+				//var strArr = new Set(string)
+				var count = (string.match(/,/g) || []).length;
+					array[count] = (array[count]+string[0])*1
+			}
+			console.log(string,array)
+			if(string.length>1){
+				stringToArray(string.slice(1),array)
+			}
+			return array
+		}
+	
+		let staticButtonNames = ["blueish", "more greenish"];
+		let staticButtonClass = ["button1", "button2"];
+		var url = window.location.href
+		let coords = /coords=([^&]+)/.exec(url)[1]
+		var result = coords ? coords : [600,600];
+		var reprehand = stringToArray(result)
+		console.log(result,reprehand)
+		
+		for(var i=0;i<2;i++){
+			thisButton = attributeSetters(staticButtonNames[i],staticButtonClass[i])
+			thisButton.style.position = "fixed"
+			thisButton.style.left = i * 100
+			thisButton.style.top = 0
+			document.getElementById("staticButtons").appendChild(thisButton);
+		}
+		let coord = ["y","x"]
+		for(var i=0;i<2;i++){
+			let number = document.createElement('input');
+			let numberL = document.createElement('label');
+			let width = 80
+			number.value = reprehand[i];
+			number.style.width = width + "px";
+			number.style.height = "20px";
+			number.style.position = "fixed"
+			number.style.right = i * (width + 20)
+			number.style.top = 0
+			number.type = "number"
+			number.min = 0
+			number.max = 1200
+			number.id = "coord" + coord[i]
+			numberL.innerHTML = coord[i] + ":";
+			numberL.style.width = 20 + "px";
+			numberL.style.height = "20px";
+			numberL.style.position = "fixed"
+			numberL.style.right = (i+1) * (width + 20) - 27
+			numberL.style.top = 0
+			number.name = "coords" + i
+			numberL.for = "coords" + i
+			document.getElementById("staticButtons").appendChild(number);
+			document.getElementById("staticButtons").appendChild(numberL);
+		}
         var translater = document.getElementById('rotatedBody')
-        let square = 2
-//        translater.style.transform = "translate(" + (square-1) * Multiplier((square-1)*11) + "px, "+ (square-1) * Multiplier((square-5)*2) + "px) rotate(-135deg) scale(.5)";
-        translater.style.transform = "rotate(-135deg) scale(1) translate(0px, 50px)";
+        let square = 200
+		let swidth = 125
+		windowCenter(square);
+        translater.style.transform = "translate(" + -(square)*15 + "px"
+										  +", "	+ -30 + "px" 
+									+ ") rotate(-135deg) scale(.707)";
+        translater.style.transform = "rotate(-135deg) scale(.707) translate(0px, 0px)";
+        translater.style.width = square*(swidth+2)*1.4 + "px";
         let table = document.createElement('table');
         let tbody = document.createElement('tbody');
         for(var i=0;i<square;i++){
@@ -83,20 +154,56 @@
             for(var j=0;j<square;j++){
                 let  row = document.createElement('td');
                 let  button = document.createElement('button');
-                button.innerHTML = Math.ceil(Math.random()*1200) + ":" + Math.ceil(Math.random()*1200);
+                button.innerHTML = (reprehand[0]-Math.floor(square/2)+i) + ":" + (reprehand[1]-Math.floor(square/2)+j);
                         row.classList.add("button") ;
-                        button.classList.add("reverserotate") ;
-                        button.classList.add("button1") ;
                         row.classList.add("button1") ;
+                        button.classList.add("reverserotate") ;
+                        button.classList.add("button2") ;
+					//	button.style.margin = 15 - button.offsetWidth + "px"
+						button.style.width = swidth + "px"
+						button.style.fontSize = "24px";
+						button.onclick = tileClicked(i,j)
                     //row.classList.remove("button1")
                         row.appendChild(button);
                         column.appendChild(row);
             }
+			//console.log("col " + i + " done")
             tbody.appendChild(column);
         }
         table.appendChild(tbody);
         var tableHolder = document.getElementById("buttonArray");
         tableHolder.appendChild(table);
+		
+		function delay(time) {
+			return new Promise(resolve => setTimeout(resolve, time));
+		}
+		
+		function tileClicked(i,j){
+			//console.log(i,j)
+		}
+
+		async function windowCenter(square) {
+			console.log('start timer');
+			await delay(500);
+			window.scrollTo(0, 0)
+			await delay(100);
+			window.scrollBy(square*50, square*50)
+			console.log('after 0.1 second');
+		}
+
+		
+		function attributeSetters(name,className){
+			let button = document.createElement('button');
+			button.innerHTML = name;
+			button.classList.add(className)
+			button.classList.add("buttonT")
+			button.style.width = "100px";
+			button.style.height = "75px";
+			return button
+		}
+		
+        function Multiplier(a) {return Math.sqrt(a*a*2)-a;}
+
     </script>
     <!--<script src="js/map_layout.js"></script> <!-- will contain class changing for buttons -->
 </html>
