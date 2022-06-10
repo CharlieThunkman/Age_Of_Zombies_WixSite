@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base target="_top">
+	<meta name=viewport" content="width=devise-width, initial-scale=1.0"/>
+	<link rel=stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel=stylesheet" href="httpe://cdnjs.cloudfare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<link rel="stylesheet" href="CSS/Troop_Formations.css"/>
+</head>
+<body>
+		<br>
+		<formNull oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+        <p style="align-items: center;justify-content: center;display: flex;">Click the target you would like a formation against, type your troop fleet max, and hit "Calculate".</p>
+        <table>
+			<tbody>
+				<tr>
+					<td style="border: 0px solid black"><input type="radio" id="0" name="fav" value="MoD"	><label for="0" id="com">Mother Of Doom</label>        	</td>
+					<td style="border: 0px solid black"><input type="radio" id="1" name="fav" value="DIG"	><label for="1" id="com">Doom's Iron Grip</label>      	</td>
+					<td style="border: 0px solid black"><input type="radio" id="2" name="fav" value="Doom1"	><label for="2" id="com">Doom Area</label>             	</td>
+					<td style="border: 0px solid black"><input type="radio" id="a" name="fav" value="Doom2"	><label for="a" id="com">Doom Area (Alt)</label>       	</td>
+			</tr><tr>
+					<td style="border: 0px solid black"><input type="radio" id="3" name="fav" value="PvP"	><label for="3" id="com">Player VS Player</label>      	</td>
+					<td style="border: 0px solid black"><input type="radio" id="4" name="fav" value="SOS"	><label for="4" id="com">Player VS Player w/ SOS</label></td>     
+					<td style="border: 0px solid black"><input type="radio" id="5" name="fav" value="MG"	><label for="5" id="com">Moutant Ghoul</label>         	</td>
+					<td style="border: 0px solid black"><input type="radio" id="6" name="fav" value="UG"	><label for="6" id="com">Uranium Gobler</label>        	</td>
+			</tr><tr>
+					<td style="border: 0px solid black"><input type="radio" id="7" name="fav" value="EZ"	><label for="7" id="com">Elite Zombie</label>          	</td>
+					<td style="border: 0px solid black"><input type="radio" id="8" name="fav" value="Mon"	><label for="8" id="com">Monster Lvl 30</label>        	</td>
+					<td style="border: 0px solid black"><input type="radio" id="9" name="fav" value="Med"	><label for="9" id="com">Medici's Treasure</label>     	</td>
+			</tbody>
+		</table>
+		<br> 
+		<input type="number" id="troops" min="18000" value="197119">
+		<inputNull type="number" id="b" value="25">
+		<outputNull name="x" for="a b"></output>
+		</form>
+		<button id="send" onclick="myFunction()">Calculate</button>
+		<button id="demo" style="font-size: 3px; background-color:#ffffff00; border-color:#ffffff00">Secret</button>
+		<p id="demo2" dir="rtl"></p>
+		
+		<script src="https://github.com/CharlieThunkman/Age_Of_Zombies_WixSite/blob/gh-pages/JS/Troop_Formations.js"></script>
+		<div class="container">
+			<div class="row">
+				<div class="col s12">
+					<table id="table">
+						<thead>
+							<tr>
+								<th><u id="err">Non-Official - Use At Your Own Risk</u></th>
+								<td dir="rtl" style="font-size: 14px;">Exact values may be a few troops off (expressed at the bottom of the table)</td>
+							<tr>
+								<th style="font-size:24px;" width="60%">Troop Types</th>
+								<th style="font-size:24px;">Count</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							</tr>
+								<td></td>
+							<tr>
+								<th>Front Line</th>
+								<td id="Front"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Infantry</td>
+								<td id="COF"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Shredder</td>
+								<td id="FEF"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Tank</td>
+								<td id="FOF"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Armored Soldier</td>
+								<td id="WEF"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+								<th>Middle Line</th>
+								<td id="Mid"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Gunner</td>
+								<td id="COM"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Rocket Launcher</td>
+								<td id="CEM"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Biker</td>
+								<td id="FEM"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Storm Trooper</td>
+								<td id="WOM"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Zombies</td>
+								<td id="zombies"></td>
+							</tr>
+							<tr>
+							</tr>
+								<td></td>
+							<tr>
+								<th>Back Line</th>
+								<td id="Back"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Sniper</td>
+								<td id="CEB"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Cannon</td>
+								<td id="FOB"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">Shielder</td>
+								<td id="WOB"></td>
+							</tr>
+							<tr>
+								<td dir="rtl">EMP Cannon (Lasors)</td>
+								<td id="WEB"></td>
+							</tr>
+							<tr>
+								<td dir="rtl"></td>
+								<td id="total"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<p style="color:#000000;background-color:#ffffff40;font-size:14px;">Information provided above are from these spreadsheets: <a href="https://docs.google.com/spreadsheets/d/1Form_eGwzhuxN1AqEdxA3JM5lg-4d233ph939YLOjLo/edit#gid=1253670355"> AoZ Fleets v5 </a> , <a href="https://docs.google.com/spreadsheets/d/17m31teEvOPG1Joohv12ITOT3YBid4w8Z6ZSx8MJZTN8/edit?usp=sharing"> AoZ Fleets v6</a> , and my own suggestions </p>
+
+	<script src="httpe://cdnjs.cloudfare.com/ajax/libs/materialize/1.0.0/css/materialize.min.js">
+</body>
+</html>
