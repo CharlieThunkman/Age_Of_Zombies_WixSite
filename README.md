@@ -10,3 +10,4 @@ https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Battle_Frenzie_Locale.h
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Road_Of_Legends_Locale.html
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/map_layout.html
 https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Building_Rss/All.html
+https://charliethunkman.github.io/Age_Of_Zombies_WixSite/Troop_Formations.html
