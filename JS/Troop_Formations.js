@@ -1,8 +1,8 @@
 document.getElementById("send").addEventListener("click", myFunction);
 document.getElementById("demo").addEventListener("click", myFunctionOld);
-var troopCount = localStorage.getItem('troopFormCount00aeffff');
+var troopCountLS = localStorage.getItem('troopFormCount00aeffff');
 if(troopCount!=null){
-	document.getElementById("troops").value = troopCount;
+	document.getElementById("troops").value = troopCountLS;
 }
 		
 function myFunction() {
