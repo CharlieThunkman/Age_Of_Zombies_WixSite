@@ -8,7 +8,7 @@ if(troopCount!=null){
 function myFunction() {
 	var x = document.getElementsByName("fav");
 	var troopCount = document.getElementById("troops")
-	localStorage.setItem('troopFormCount00aeffff', troopCount);
+	localStorage.setItem('troopFormCount00aeffff', troopCount.value);
 	for (var i = 0; i < x.length; i++) {
 		if (x[i].checked == true) {
 		var result = percentCalc(x[i].value,troopCount.value);
