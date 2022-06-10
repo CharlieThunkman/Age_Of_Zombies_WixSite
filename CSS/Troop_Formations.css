@@ -1,0 +1,9 @@
+#err {background-color: #900000f0; font-family: 'Algerian';color: #ff7070;	display: flex;justify-content: center;align-items: center;font-size: 24px;}
+#com {background-color: #FF202000; font-family: 'Algerian';color: #ffffff;	font-size: 16px;}
+td {background-color: #FF202000; font-family: 'Algerian';color: #ffffff;	font-size: 16px;}
+input {background-color: #FF2020f0; font-family: 'Algerian';color: #ffffff;	font-size: 24px;width:10px;}
+#troops {background-color: #FF202000; font-family: 'Algerian';color: #ffffff;	font-size: 24px;width:140px;border: 1px solid white;}
+button {font-family: 'Algerian'; font-size: 24px;background-color:#00aeffff}
+th,p {background-color: #FF202000; font-family: 'Algerian';color: #ffffff;	font-size: 20px;}
+table, th, td {  border: 1px solid white;}
+table {  border-collapse: collapse;width: 100%}
