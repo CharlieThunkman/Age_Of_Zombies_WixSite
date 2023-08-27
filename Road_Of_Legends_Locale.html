@@ -22,7 +22,7 @@
 		];
 			var now = moment()
 			var next = moment().startOf('month')
-			var end  = moment().startOf('month').add(1,"m").subtract(1,"ms")
+			var end  = moment().startOf('month').add(1,"month").subtract(1,"ms")
 			next.add(next.format("ZZ")/100,"h")
 			end.add(end.format("ZZ")/100,"h")
 			//console.log (next.local(true).format("MMM Do, YYYY @ hh:mm:ss a ZZ")," to ",
